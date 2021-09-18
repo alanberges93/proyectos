@@ -1,0 +1,217 @@
+
+/* Tipografías personalizadas*/
+@font-face {
+    font-family: "simplicity";
+    src: url(../../../assets/fonts/simplicity.ttf);
+}
+
+/* Responsive PC */
+@media (min-width:1080px){
+    /* Div contenedor */
+    #container{    
+        width: 80%;
+        padding-left: 10%;
+    }
+
+    /* Otros divs*/
+    #div-modificar, #div-informacion, #container-iniciarSesion{
+        display: inline-block;
+        width: 50%;
+    }
+    #div-modificar, #container-iniciarSesion{
+        margin: 0 auto;
+        flex: initial;
+        float: right;
+    }
+
+    /* Título de la página (se complementa con el título de styles.css en assets)*/
+    .titulo{
+        margin-bottom: 30px;
+    }
+
+    /* Subtitulos */
+    h1{
+        text-align: left !important;
+    }
+
+    h4{
+        font-family: "simplicity";
+        font-size: 20px;
+        padding-top: 10px;  
+        padding-bottom: 10px;
+    }
+
+    /* Imagen del proyecto */
+    img{
+        width: 350px;
+        height: 250px;
+    }
+
+    /* Inputs del formulario Modificar */
+    #div-modificar input[type=text], input[type=number],textarea{
+        margin-left: 12% !important; 
+        margin-bottom: 15px !important;      
+        width: 100% !important;
+    }
+    #div-modificar textarea{
+        height: 0.5% !important;
+    }
+
+    /* Botones del formulario Modificar*/
+    #div-modificar input[type=button], #div-modificar input[type=submit]{
+        margin-left: 20% !important;
+        margin-right: 0px !important; 
+    }
+    input[type=button], #div-modificar input[type=submit]{
+        display: inline-block;
+        color: white;
+        background-color: rgba(3, 104, 3, 0.596);
+        width: 30%;
+        height: 40px !important;
+        margin-top: 20px;
+        text-align: center;
+        cursor: pointer;
+        font-size: large;
+        margin: 0 auto;     
+        margin-right: 15px;  
+        margin-bottom: 15px;   
+    }
+    #div-modificar input[type=button], #div-modificar input[type=submit]{
+        margin-top: 15px;
+        margin-left: 12%;
+    }
+
+    /* Botones para el container-iniciarSesion */
+    #container-iniciarSesion input[type=button]{
+        margin-left: 40%;
+    }
+
+    /* Guía para completar los inputs (se complementa con los de forms.css en assets)*/
+    form span{
+        margin-top: 5px;
+        margin-left: 12% !important;
+        width: 100%;  
+    }
+
+    /* Mensaje de error (se complementa con los de forms.css en assets) */
+    #mensajeError{
+        margin-left: 12% !important;
+        width: 100% !important;
+    }
+
+    /* Texto y circulo de carga (se complementan con los de forms.css en assets) */
+    .container-preloader{
+        margin-left: 12% !important;     
+    }
+    .container-preloader p{
+        font-size: 3.5vh !important;
+    }
+    .preloader{
+        width: 2vh !important;
+        height: 2vh !important;
+    }
+}
+
+
+
+/* Responsive Mobile */
+@media (max-width:1080px){
+    /* Div contenedor */
+    #container{    
+        width: 90%;
+        margin: auto;
+        padding: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Otros divs*/
+    #div-modificar, #div-informacion, #container-iniciarSesion{
+        text-align: center;
+    }
+    #div-modificar, #container-iniciarSesion{
+        margin: 0 auto;
+        margin-top: 15px;
+        flex: initial;
+    }
+
+    /* Título de la página (se complementa con el título de styles.css en assets)*/
+    .titulo{
+        margin-bottom: 30px;
+        text-align: center !important;
+    }
+
+    /* Subtitulos */
+    h1{
+        text-align: left !important;
+    }
+
+    h4{
+        font-family: "simplicity";
+        font-size: 20px;
+        padding-top: 10px;  
+        padding-bottom: 10px;
+    }
+
+    /* Imagen del proyecto */
+    img{
+        width: 300px;
+        height: 200px;
+    }
+
+    /* Inputs del formulario Modificar */
+    #div-modificar input[type=text], input[type=number],textarea{
+         
+        margin-bottom: 15px !important;      
+        width: 100% !important;
+    }
+    #div-modificar textarea{
+        height: 0.5% !important;
+    }
+
+    /* Botones del formulario Modificar*/    
+    input[type=button], #div-modificar input[type=submit]{
+        display: inline-block;
+        color: white;
+        background-color: rgba(3, 104, 3, 0.596);
+        width: 30%;
+        height: 40px !important;
+        margin-top: 20px;
+        text-align: center;
+        cursor: pointer;
+        font-size: large;
+        margin: 0 auto;     
+        margin-right: 15px;  
+        margin-bottom: 15px;   
+    }
+    #div-modificar input[type=button], #div-modificar input[type=submit]{
+        margin-top: 15px;
+        margin-left: 12%;
+    }
+
+    /* Guía para completar los inputs (se complementa con los de forms.css en assets)*/
+    form span{
+        margin-top: 5px;
+        margin-left: 12% !important;
+        width: 100%;  
+    }
+
+    /* Mensaje de error (se complementa con los de forms.css en assets) */
+    #mensajeError{
+        margin-left: 12% !important;
+        width: 100% !important;
+    }
+
+    /* Texto y circulo de carga (se complementan con los de forms.css en assets) */
+    .container-preloader{
+        margin-left: 12% !important;     
+    }
+    .container-preloader p{
+        font-size: 3.5vh !important;
+    }
+    .preloader{
+        width: 2vh !important;
+        height: 2vh !important;
+    }
+}
+

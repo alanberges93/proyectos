@@ -1,0 +1,26 @@
+
+<div id="proyectos">
+
+    <h1 class="titulo">{{titulo}}</h1>
+
+    <div class="container-preloader" *ngIf="proyectosCargados=='cargando'">
+        <div class="preloader"> </div>
+        <p> Cargando proyectos... </p>
+    </div>  
+ 
+    <div class="mensajeError" *ngIf="proyectosCargados=='error'"> 
+       <p> Ocurrió un error al cargar los proyectos. Inténtelo nuevamente. </p> 
+    </div>  
+
+    <div id="listado-proyectos"> 
+        <div class="proyecto" *ngFor="let proyecto of proyectos">
+            <a [routerLink]="[proyecto._id]">        
+                <img src="{{urlProyectos.getImagen+proyecto.imagen}}" *ngIf="proyecto.imagen">
+                <h2>{{proyecto.nombre}}</h2>
+                <h3>{{proyecto.categoria}}</h3>  
+            </a>  
+        </div>
+     </div>
+</div>
+
+

@@ -1,0 +1,26 @@
+
+@media (min-width: 1080px) {
+    /* Pie de página */
+    footer{
+        width: 75%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 90px;
+        margin: 0px auto;  
+        font-style: italic;  
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1080px) {
+    /* Pie de página */
+    footer{
+        width: 75%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 20px;
+        margin: 0px auto;  
+        font-style: italic;  
+        font-size: 2vh;
+    }
+}

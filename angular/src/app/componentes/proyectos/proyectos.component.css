@@ -1,0 +1,89 @@
+
+/* Tipografías personalizadas */
+@font-face {
+    font-family: "catCafe";
+    src: url(../../../assets/fonts/catCafe.ttf);
+}
+
+/* Título de la página (se complementa con el título de styles.css en assets)*/
+.titulo{
+    margin-bottom: 30px;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+/* Contenedor - Listado de proyectos */
+#listado-proyectos{
+    line-height: 150px;
+    text-align: center;   
+}
+
+/* Contenido - Proyecto*/
+.proyecto{
+    margin: 30px;
+    margin-bottom: 50px;
+    width: 300px;
+    height: 200px;
+
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Imagenes de los proyectos */
+.proyecto img{       
+    padding-left: 5px;
+    border-radius: 20px;
+    border-bottom: 5px solid rgb(83, 82, 82);
+    border-right: 3px solid rgb(97, 95, 95);
+}
+.proyecto img:hover{ 
+    opacity: 0.7;
+ }
+
+/* Subtitulos y links */
+.proyecto a {
+    text-decoration: none;
+}
+.proyecto h2,h3{
+    text-align: center;
+    font-family: "catCafe";    
+    color: black;   
+    letter-spacing: 2px; 
+}
+.proyecto h2{
+    font-size: large;
+}
+.proyecto h3{
+    font-size: medium;
+}
+.proyecto a {
+    text-decoration: none;
+}
+
+/* Mensaje de error (se complementa con los de forms.css en assets) */
+#mensajeError p{
+    text-align: center !important;
+}
+
+/* Texto y circulo de carga (se complementan con los de forms.css en assets) */
+.container-preloader{
+    margin-left: 50px !important;     
+}
+
+/* Responsive PC */
+@media (min-width:1080px){
+    .proyecto img{
+        width: 300px;
+        height: 200px;
+    }
+}
+
+/* Responsive Mobile */
+@media (max-width:1080px){
+    .proyecto img{
+        width: 300px;
+        height: 200px;
+    }
+}
+

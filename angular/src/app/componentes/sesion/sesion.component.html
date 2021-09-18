@@ -1,0 +1,45 @@
+<div id="container">
+    
+    <div id="iniciarSesion" *ngIf="sesion == ''">
+        <h2 class="titulo">{{titulo}}</h2>
+        <h3> Iniciá sesión con tu cuenta de administrador </h3>
+        
+        <div class="container-preloader" *ngIf="sesionIniciada=='cargando'">
+            <div class="preloader"> </div>
+            <p> Validando información... </p>
+        </div> 
+
+        <div class="mensajeError" *ngIf="sesionIniciada=='invalida'"> 
+            <p> El usuario o contraseña es inválido. Inténtelo nuevamente. </p> 
+        </div>  
+        
+        <div class="mensajeError" *ngIf="sesionIniciada=='error'"> 
+            <p> Ocurrió un error al verificar su cuenta. Inténtelo nuevamente. </p> 
+        </div>  
+    
+        <form action="" #sesionForm="ngForm" (ngSubmit)="iniciarSesion(sesionForm)">
+            <p>
+                <input type="text" name="nombre" id="" #usuario="ngModel" [(ngModel)]="usuarioIngresado" placeholder="Usuario: admin" required pattern="[a-z]{5,20}" >
+                <span *ngIf="usuario.touched && !usuario.valid"> El usuario es obligatorio, solo debe contener letras y tener entre 5 y 20 caracteres </span>
+            </p>            
+        
+            <p>
+                <input type="password" name="password" #password="ngModel" [(ngModel)]="passwordIngresada" id="" placeholder="Contraseña: Admin01" required pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,15}$" >
+                <span *ngIf="password.touched && !password.valid"> La contraseña es obligatoria, debe tener entre 6 y 15 caracteres, contener mayúsculas, minúsculas y números  </span>
+            </p> 
+            
+            <input type="submit" value="Ingresar" [disabled]="!sesionForm.valid">
+        </form>   
+    </div>
+    
+    <div id="sesionIniciada" *ngIf="sesion == 'iniciada'">
+        <h2 class="titulo">Bienvenido {{nombreUsuario}}!</h2>
+        <h3> Administrador del sitio web </h3>
+        <h3> Ya podés crear, modificar y borrar proyectos </h3>
+        <input type="button" value="Cerrar sesión" (click)="cerrarSesion()">
+    </div>  
+
+</div>
+
+
+ 

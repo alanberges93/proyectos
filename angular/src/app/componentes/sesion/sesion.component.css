@@ -1,0 +1,19 @@
+
+/* Tipografías personalizadas */
+@font-face {
+    font-family: "stanberry";
+    src: url(../../../assets/fonts/stanberry.ttf);
+}
+
+/* Titulos y Subtitulos*/
+.titulo{
+    margin-bottom: 30px;
+    width: 60% ;
+    margin-left: 20%;
+}
+
+/**/
+/* Texto y circulo de carga (se complementan con los de forms.css en assets) */
+.container-preloader{
+    margin-left: 20%;
+}

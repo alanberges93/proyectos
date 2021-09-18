@@ -1,0 +1,21 @@
+
+<header >  
+  <div>
+    <ul id="menu"> 
+      <a id="logo-iniciar-sesion" [routerLink]="['/sesion']"> <img src="../assets/img/logo sesion.png" alt=""> </a>      
+      <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']" >Sobre mi</a></li>
+      <li><a [routerLink]="['/proyectos']" [routerLinkActive]="['actived']">Proyectos</a></li>
+      <li id="logo"><a  href="#">AB</a></li>      
+      <li><a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['actived']">Crear proyecto</a></li>
+      <li><a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a></li>      
+    </ul>
+  </div>  
+</header>
+
+<section id="content">    
+  <router-outlet ></router-outlet>
+</section>
+
+<footer>
+  Desarrollado en JavaScript por Alan Berges
+</footer>

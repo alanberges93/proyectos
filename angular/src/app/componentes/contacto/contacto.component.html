@@ -1,0 +1,54 @@
+
+<div id="container">
+
+    <h2 class="titulo">{{titulo}}</h2>
+
+    <h3> Comunicate por Whatsapp, <br> 
+        enviá un correo electrónico <br> 
+        o completá el siguiente formulario 
+    </h3>
+
+    <div id="icono-contacto">
+        <a href="https://web.whatsapp.com/send?phone=5491128175894&text=Hola Alan, me comunico por tu página web" target="_blank"> <img src="../../../assets/img/whatsapp.png" alt="" id="icono-whatsapp" class="icono"> </a>  
+        <a href="mailto:alan.berges93@gmail.com" target="_blank"> <img src="../../../assets/img/mail.png" alt="" id="icono-mail" class="icono"> </a> 
+    </div>
+
+    <div class="container-preloader" *ngIf="mensajeEnviado=='guardando'">
+        <div class="preloader"> </div>
+        <p> Enviando mensaje... </p>
+    </div>  
+
+    <div class="mensajeExitoso" *ngIf="mensajeEnviado=='exitoso'"> 
+        <p> El mensaje se envió con éxito </p>  
+    </div>   
+    <div class="mensajeError" *ngIf="mensajeEnviado=='error'"> 
+       <p> Ocurrió un error al enviar el mensaje. Inténtelo nuevamente. </p> 
+    </div>  
+
+    <div id="div-contacto">
+        <form #contactForm="ngForm" (submit)="enviarMail(contactForm)">
+            <p>
+                <input type="text" name="nombre" id="" #nombre="ngModel" [(ngModel)]="mensaje.nombre" placeholder="Nombre" required [class.inputIncompleto]="nombre.touched && !nombre.valid">
+                <span *ngIf="nombre.touched && !nombre.valid"> El nombre es obligatorio </span>
+            </p>           
+    
+            <p>
+                <input type="email" name="email" id="" #email="ngModel" [(ngModel)]="mensaje.email" placeholder="Correo electrónico" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [class.inputIncompleto]="email.touched && !email.valid">
+                <span *ngIf="email.touched && !email.valid"> El correo es obligatorio y debe tener el siguiente formato: email@example.com </span>
+            </p>            
+    
+            <p>
+                <input type="text" name="asunto" id="" #asunto="ngModel" [(ngModel)]="mensaje.asunto" placeholder="Asunto" required [class.inputIncompleto]="asunto.touched && !asunto.valid">
+                <span *ngIf="asunto.touched && !asunto.valid"> El asunto es obligatorio </span>
+            </p>
+            
+            <p>
+                <textarea name="descripcion" id="" #descripcion="ngModel" [(ngModel)]="mensaje.descripcion" placeholder="Mensaje" required [class.inputIncompleto]="descripcion.touched && !descripcion.valid"></textarea>
+                <span *ngIf="descripcion.touched && !descripcion.valid"> El mensaje es obligatorio </span>
+            </p>            
+    
+            <input type="submit" value="Enviar mail" [disabled]="!contactForm.valid">
+        </form>
+    </div>
+
+</div>

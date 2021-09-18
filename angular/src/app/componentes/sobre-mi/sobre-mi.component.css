@@ -1,0 +1,90 @@
+
+/* Tipografías personalizadas */
+@font-face {
+    font-family: "yanone";
+    src: url(../../../assets/fonts/yanone.ttf);
+}
+@font-face {
+    font-family: "finger";
+    src: url(../../../assets/fonts/finger.ttf);
+}
+@font-face {
+    font-family: "rabbitsAndFoxes";
+    src: url(../../../assets/fonts/rabbitsAndFoxes.ttf);
+}
+@font-face {
+    font-family: "simplicity";
+    src: url(../../../assets/fonts/simplicity.ttf);
+}
+@font-face {
+    font-family: "missKindy";
+    src: url(../../../assets/fonts/missKindy.ttf);
+}
+@font-face {
+    font-family: "dropsofJupiter";
+    src: url(../../../assets/fonts/dropsofJupiter.ttf);
+}
+
+/* Título de la página (se complementa con el título de styles.css en assets)*/
+#titulo{
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 50px;
+    width: 70%;
+    align-items: center;
+}
+
+/* Subtitulos, párrafos y links de la sección superior */
+#titulo h1, h2, p{
+    padding-bottom: 4px;
+}
+#titulo h1{
+    font-family: "finger";
+    border-bottom: 1px solid #ccc;
+}
+#titulo h2{
+    font-family: "rabbitsAndFoxes";
+    font-size: 3.5vh;
+    color:rgb(95, 93, 93);
+}
+#titulo p{
+    font-family: "missKindy";
+    font-size: 2.5vh;
+    color: gray;    
+}
+a{
+    color:gray;
+}
+
+/* Subtitulos y párrafos del artículo (sección inferior) */
+.sobre-mi{
+    margin: 0 auto;
+    padding-bottom: 50px;
+    width: 70%;
+    align-items: center;
+}
+.sobre-mi h2{
+    text-align: left !important; 
+}
+.sobre-mi p{    
+    padding-top: 10px;
+    font-family: "dropsofJupiter";
+    font-style: italic;
+    font-size: 2vh;
+    text-align: justify;
+    letter-spacing: 2px;    
+}
+
+/* Responsive PC */
+@media (min-width:1080px){
+    #titulo h1{
+        font-size: 6vh;
+    }
+}
+
+/* Responsive Mobile */
+@media (max-width:1080px){
+    #titulo h1{
+        font-size: 4vh;
+    }
+}

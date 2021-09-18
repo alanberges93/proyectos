@@ -1,0 +1,45 @@
+
+/* Título y subtitulos de la página (se complementa con el título de styles.css en assets)*/
+.titulo{
+    margin-bottom: 30px;
+}
+form label{ 
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-family: cursive;
+}
+form input[type="submit"], input[type="button"]{ 
+    margin-bottom: 10px;
+}
+form span{
+    margin-left: 0% !important;    
+}
+.mensajeExitoso, .mensajeError{
+    width: 100% !important;    
+}
+
+/* Responsive */
+@media (min-width:1080px){
+    /* Div contenedor */
+    #container, #container-iniciarSesion{
+        display: block;
+        padding-left: 20%;
+        width: 60%; 
+    }     
+    /* Inputs de la página (se complementan con los de forms.css en assets) */
+    form label, input, textarea{    
+        width: 100% !important;
+    } 
+    form input[type="submit"], input[type="button"]{ 
+        width: 25% !important;   
+    }  
+}
+@media (max-width:1080px){
+    /* Div contenedor */
+    #container, #container-iniciarSesion{
+        display: block;
+        width: 100%; 
+    }  
+}
+
+
