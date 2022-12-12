@@ -2,7 +2,7 @@
 /* Angular  Cli 
 
 INSTALACION:
-  Instalarlo desde el cmd con: npm install -g @angular/cli
+  Instalarlo desde el cmd con: npm install -g @angular/cli 
   Agregar proyecto desde terminal Visual Code con: ng new nombre-proyecto
 
 INICIAR:
